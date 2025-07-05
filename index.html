@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Beğeni Paneli</title>
+  </head>
+  <body>
+    <h1>Tweet Beğeni Paneli</h1>
+    <p>Tweet ID girin:</p>
+    <input type="text" id="tweetId" placeholder="örn: 1234567890">
+    <button onclick="begen()">Beğen</button>
+
+    <p id="sonuc"></p>
+
+    <script>
+      function begen() {
+        const tweetId = document.getElementById("tweetId").value;
+        if (!tweetId) {
+          alert("Tweet ID girin!");
+          return;
+        }
+        document.getElementById("sonuc").innerText =
+          "Tweet ID " + tweetId + " beğenildi (simülasyon).";
+      }
+    </script>
+  </body>
+</html>
